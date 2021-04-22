@@ -12,7 +12,7 @@ class StaticOS
 {
     public static function isLinux(): bool
     {
-        return (self::shortName() === 'linux');
+        return (self::name() === 'Linux');
     }
 
     public static function ifLinux(callable $callback): void
@@ -24,7 +24,7 @@ class StaticOS
 
     public static function isMacOs()
     {
-        return (self::shortName() === 'macos');
+        return (self::name() === 'Darwin');
     }
 
     public static function ifMacOs(callable $callback): void
@@ -36,7 +36,7 @@ class StaticOS
 
     public static function isWindows(): bool
     {
-        return (self::shortName() === 'windows');
+        return (self::name() === 'Windows');
     }
 
     public static function ifWindows(callable $callback): void
