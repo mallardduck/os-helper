@@ -67,14 +67,6 @@ class StaticOS
                 return 'macos';
                 break;
 
-            case 'Linux':
-                return 'linux';
-                break;
-
-            case 'Windows':
-                return 'windows';
-                break;
-
             // Fall back on removing spaces and making everything lowercase
             default:
                 return str_replace(' ', '', strtolower($osSystemName));
