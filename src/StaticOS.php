@@ -51,25 +51,7 @@ class StaticOS
      */
     public static function name()
     {
-        $osSystemName = PHP_OS_FAMILY;
-
-        switch ($osSystemName) {
-            case 'Darwin':
-                return 'Mac OS';
-                break;
-
-            case 'Linux':
-                return $osSystemName;
-                break;
-
-            case 'Windows':
-                return $osSystemName;
-                break;
-
-            default:
-                return $osSystemName;
-                break;
-        }
+        return PHP_OS_FAMILY;
     }
 
     /**
@@ -81,7 +63,7 @@ class StaticOS
         $osSystemName = self::name();
 
         switch ($osSystemName) {
-            case 'Mac OS':
+            case 'Darwin':
                 return 'macos';
                 break;
 
